@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sofl and Light</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="app-card">
+
+    <img src="static/img/logo.jpg" class="logo">
+
+    <h1>🌿 Sofl and Light</h1>
+    <p>Bem-vindo! Faça login para continuar</p>
+
+    <!-- LOGIN -->
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+
+    <hr>
+
+    <!-- CRIAR CONTA -->
+    <h3>Criar uma nova conta</h3>
+    <input type="text" id="novoUsuario" placeholder="Novo usuário">
+    <input type="password" id="novaSenha" placeholder="Nova senha">
+    <button onclick="criarConta()">Criar Conta</button>
+
+    <div id="toast"></div>
+
+     <footer class="app-footer">
+        <p>© 2026 Sofl and Light - Todos os direitos reservados a Mishell adm14</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+* {
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Estilo base do body com fundo */
+body {
+    background: url("img/fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+
+/* .app-card com tamanho fixo desktop */
+.app-card {
+    width: 360px;
+    height: 640px;
+    background: rgba(27, 9, 196, 0.93);
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.app-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #78da28;
+}
+
+.app-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.app-card button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    border: none;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.app-card button:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    display: block;       /* transforma em bloco para funcionar margem */
+    margin: 0 auto 15px;  /* centraliza horizontalmente e dá margem abaixo */
+    width: 90px;          /* mantém o tamanho desejado */
+}
+
+h1, h2 {
+    color: #2e7d32;
+}
+
+p {
+    color: #555;
+}
+
+.btn, button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    text-decoration: none;
+    border-radius: 18px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+    transform: scale(1.05);
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    border-radius: 15px;
+    transition: width 0.3s;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2e7d32;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.toast.show {
+    opacity: 1;
+    bottom: 50px;
+}
+
+/* Modo escuro */
+body.dark {
+    background: #121212;
+}
+
+body.dark .app-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark p {
+    color: #ccc;
+}
+.app-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* empurra conteúdo e footer para cantos */
+    height: 640px; /* já tinha, mantém o tamanho */
+    width: 360px;
+	padding: 25px;
+    background: rgba(255,255,255,0.93);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    text-align: center;
+    transition: transform 0.3s;
+	overflow-y: auto; /* importante para rolar o conteúdo se ultrapassar a altura */
+    text-align: center;
+}
+.barra-agua {
+    width: 100%;
+    height: 25px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#aguaBarra {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: width 0.4s ease;
+}
+
+.dark .barra-agua {
+    background: #444;
+}
+
+}
+.app-footer {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* No modo escuro */
+body.dark .app-footer {
+    border-top: 1px solid #444;
+    color: #aaa;
+	
+}
+
+.finance-section {
+    margin-top: 20px;
+    text-align: left;
+	flex-shrink: 0;
+}
+
+.finance-section h3 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.finance-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.finance-section button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    border: none;
+    border-radius: 18px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+	margin-bottom: 8px;
+}
+
+.finance-section button:hover {
+    transform: scale(1.05);
+}
+
+#listaContas, #listaMetas {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+#listaContas li, #listaMetas li {
+    background: #e0f2f1;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    color: #004d40;
+    font-weight: 600;
+	padding: 6px 10px;
+    border-bottom: 1px solid #b2dfdb;
+}
+
+#listaContas li label {
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.conta-checkbox {
+    cursor: pointer;
+    width: auto;
+    min-width: 16px;
+}
+
+.conta-checkbox:checked + {
+    opacity: 0.7;
+}
+
+/* RESPONSIVO: celular */
+@media (max-width: 480px) {
+    body {
+        background: #fff; /* remove imagem de fundo no celular */
+        height: 100vh;
+        margin: 0;
+    }
+    .app-card {
+        width: 100vw;   /* ocupa toda largura da tela */
+        height: 100vh;  /* ocupa toda altura da tela */
+        border-radius: 0; /* remove bordas arredondadas */
+        box-shadow: none; /* remove sombra */
+        padding: 20px;
+    }
+}

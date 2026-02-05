@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="static/style.css" />
+    </head>
+<body>
+<div class="app-card">
+
+    <h2>📊 Dashboard Financeiro</h2>
+    <canvas id="graficoFinanceiro" style="width:100%;height:220px;"></canvas>
+
+
+    <section class="finance-section">
+        <h3>Adicionar Conta</h3>
+        <input type="text" id="nomeConta" placeholder="Nome da conta" />
+        <input type="number" id="valorConta" placeholder="Valor (R$)" />
+        <button onclick="adicionarConta()">Adicionar Conta</button>
+        <ul id="listaContas"></ul>
+        <button id="btnExcluirContas" onclick="excluirContas()" style="background: #d32f2f; margin-top: 8px;">Excluir Selecionadas</button>
+    </section>
+
+    <section class="finance-section">
+        <h3>Definir Meta</h3>
+        <input type="text" id="nomeMeta" placeholder="Nome da meta" />
+        <input type="number" id="valorMeta" placeholder="Valor da meta (R$)" />
+        <button onclick="adicionarMeta()">Adicionar Meta</button>
+        <ul id="listaMetas"></ul>
+        <button id="btnExcluirMetas" onclick="excluirMetas()" style="background: #d32f2f; margin-top: 8px;">Excluir Selecionadas</button>
+    </section>
+
+    <a href="index.html" class="btn">⬅ Voltar</a>
+
+  <footer class="app-footer">
+        <p>© 2026 Sofl and Light - Todos os direitos reservados a Mishell adm14</p>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="static/app.js"></script>
+</body>
+</html>
